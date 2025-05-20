@@ -1,91 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="./styles.css">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔮 The {{ ring_name }} 🧙</title>
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <header>
-      <h1><a name="top"></a>🔮 The {{ ring_name }} 🧙</h1>
-	  <p>{{ ring_description }}</p>
+      <h1 id="top">🔮 The {{ ring_name }} 🧙</h1>
+      <p>{{ ring_description }}</p>
     </header>
     <main>
-      <p>Currently, the {{ ring_name }} counts {{ number_of_sites }} sorcerers and shamans.</p>
-      <p>Some of this circle's spellslingers have channeled their magic into RSS feeds; they are aggregated here: <a href ="{{ opml }}">[feed]</a></p>
-      <p>For more information, see the 'About' section at the bottom of this page or click the following link: <a href="#more-info">[more info]</a></p>
-      <main>
+      <p>
+        Currently, the {{ ring_name }} counts {{ number_of_sites }} sorcerers
+        and shamans.
+      </p>
+      <p>
+        Some of this circle's spellslingers have channeled their magic into RSS
+        feeds; they are aggregated here: <a href="{{ opml }}">[feed]</a>
+      </p>
+      <p>
+        For more information, see the 'About' section at the bottom of this page
+        or click the following link: <a href="#more-info">[more info]</a>
+      </p>
+      <article>
         <h2>Members</h2>
         <ol class="cards">
           {% for site in sites %}
           <li class="card">
             <!-- {{ loop.index }} -->
-            <header class="card__header{% if site.website.name == featured_site_name %}--featured{% endif %}">
-              <h2>{{ site.website.name }}{% if site.website.name == featured_site_name %} ✨{% endif %}</h2>
+            <header
+              class="card__header{% if site.website.name == featured_site_name %}--featured{% endif %}"
+            >
+              <h2>
+                {{ site.website.name }}{% if site.website.name ==
+                featured_site_name %} ✨{% endif %}
+              </h2>
             </header>
-            <section class="card__links">
-            <a href="{{ site.website.url }}">{{ site.website.url }}</a>
-              {% if site.website.rss %}
-                • <a href="{{ site.website.rss }}">[feed]</a>
+            <div class="card__links">
+              <a href="{{ site.website.url }}">{{ site.website.url }}</a>
+              {% if site.website.rss %} •
+              <a href="{{ site.website.rss }}">[feed]</a>
               {% endif %}
-            </section>
-            <section class="card__content">
+            </div>
+            <div class="card__content">
               <p class="card__about">{{ site.website.about }}</p>
               <p class="card__owner">
                 <strong>Owner:</strong> {{ site.website.owner }}
               </p>
               <p class="card__meta">
-                <strong>Slug:</strong> <code class="slug">{{ site.website.slug }}</code>
+                <strong>Slug:</strong>
+                <code class="slug">{{ site.website.slug }}</code>
               </p>
-            </section>
+            </div>
           </li>
           {% endfor %}
         </ol>
-      </main>
+      </article>
       <section>
-        <h2><a name="more-info"></a> About</h2>
-        <h3>FAQ</h3>
+        <h2 id="more-info">About</h2>
         <details>
-          <summary>What are the rules?</summary>
-          <p>
-            <ul>
+          <summary><h3>What are the rules?</h3></summary>
+          <p></p>
+          <ul>
             <li>Join if you like magic!</li>
             <li>Put the webring links on your site.</li>
             <li>No bigotry/hate speech.</li>
-            </ul>
-          </p>
+          </ul>
         </details>
         <details>
-          <summary>How do I join?</summary>
-          <p>
-            <ol>
-            <li>Add the links to your page.</li>
-            <li><em>Either</em> make a pull request adding your website to websites.json <em>or</em> contact me directly about joining.</li>
-            <li>That's it! If your request is approved, you will be added right away.</li>
-            </ol>
-          </p>
+          <summary><h3>How do I join?</h3></summary>
+          <p></p>
+          <ol>
+            <li>
+              <p>Add the following webring HTML somewhere on your site:</p>
+              <p>
+                <code>
+                  &lt;a href="{{ base_url }}/<b><i>YOUR_SLUG</i></b
+                  >/previous">←&lt;/a><br>
+                  🔮 &lt;a href="{{ base_url }}">{{ ring_name }}&lt;/a> 🧙<br>
+                  &lt;a href="{{ base_url }}/<b><i>YOUR_SLUG</i></b
+                  >/next">→&lt;/a>
+                </code>
+              </p>
+
+              <p>
+                (Replace
+                <code
+                  ><b><i>YOUR_SLUG</i></b></code
+                >
+                with a keyword representing your site - for example, I use the
+                slug <code>Gil</code> for my website <code>gil.ink</code>)
+              </p>
+            </li>
+
+            <li>
+              <a href="https://github.com/kalanggam/spellcircle/issues">Create an issue</a>
+              on Github with the join template. The join template will ask for
+              all the information required to add you to the webring.
+              <ul>
+                <li>
+                  <em>or</em> if you're confident with Git, you can make a pull
+                  request adding your website to websites.json
+                </li>
+                <li>
+                  <em>or</em> you can make an email request to <code><b>spellcircle@gil.ink</b></code> using
+                  <a
+                    href="mailto:spellcircle@gil.ink?subject=🔮%20Join%20request:%20Website%20name&body=Website%20name%0D%0AA%20short%20description%20of%20you,%20your%20site,%20and/or%20your%20magical%20activities%0D%0ASlug%20(for%20generating%20redirect%20links)%0D%0AURL%20(where%20you%20will%20have%20webring%20links)%0D%0ARSS/Atom%20feed%20URL%0D%0AYour%20name%20or%20your%20handle%20on%20the%20Fediverse"
+                  >
+                    this template</a
+                  >, leave a comment on Neocities, or message me elsewhere.
+                </li>
+              </ul>
+            </li>
+            <li>
+              That's it! If your request is approved, you will be added right
+              away.
+            </li>
+          </ol>
         </details>
         <details>
-          <summary>How do I leave?</summary>
+          <summary><h3>How do I leave?</h3></summary>
           <p>
-            You can contact me to leave the webring and I'll remove you right away. You can also just take the webring links off your website, although it may take longer to be reflected on the homepage.
+            You can contact me to leave the webring and I'll remove you right
+            away. You can also remove your webring links from your page,
+            although it may take longer to be reflected on the homepage.
           </p>
         </details>
         <h3>Colophon</h3>
-        <p>This site was conjured by <a href="https://github.com/k3rs3d/ringfairy">ringfairy 🧚</a>.</p>
+        <p>
+          This site was conjured by
+          <a href="https://github.com/k3rs3d/ringfairy">ringfairy 🧚</a>. This
+          webring has a repository on Github at
+          <a href="https://github.com/kalanggam/spellcircle"
+            >github.com/kalanggam/spellcircle</a
+          >
+          that contains the config files used to generate the webring as well as
+          <code>websites.json</code>, a JSON file of webring members.
+        </p>
         <h3>Feed</h3>
-        <p>As mentioned above, all the RSS feeds in the circle are aggregated here: <a href ="{{ opml }}">[feed]</a></p>
+        <p>
+          As mentioned above, all the RSS feeds in the circle are aggregated
+          here: <a href="{{ opml }}">[feed]</a>
+        </p>
       </section>
     </main>
-	<footer>
+    <footer>
       <p>
-        <a href="https://spellcircle.neocities.org/Spellcircle/previous">&larr;</a>
+        <a href="https://spellcircle.neocities.org/Spellcircle/previous"
+          >&larr;</a
+        >
         🔮 <a href="https://spellcircle.neocities.org">Spellcircle</a> 🧙
         <a href="https://spellcircle.neocities.org/Spellcircle/next">&rarr;</a>
       </p>
-	  <p>Last updated: {{ current_time }}</p>
-	  <p><a href="#top">Back to top</a></p>
-	</footer>
+      <p>Last updated: {{ current_time }}</p>
+      <p><a href="#top">Back to top</a></p>
+    </footer>
   </body>
 </html>

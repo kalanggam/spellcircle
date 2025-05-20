@@ -118,6 +118,7 @@
     --color-link: rgb(140, 100, 227);
     --color-hover: rgb(153, 111, 242);
     --color-active: rgb(96, 34, 230);
+    font-size: 100%;
 }
 
 body {
@@ -150,6 +151,24 @@ a:hover, a:focus {
 
 a:active {
     color: var(--color-active);
+}
+
+code {
+    font-size: 125%;
+}
+
+details {
+    display: block;
+    box-sizing: border-box;
+    background: var(--color-ui-2);
+    border-radius: var(--corner-radius);
+    padding: var(--card-padding);
+    margin-bottom: var(--card-spacing);
+}
+
+details h3 {
+    display: inline-block;
+    margin: 0;
 }
 
 .container {
