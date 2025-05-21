@@ -2,16 +2,24 @@
     {
         "name": "The Spellcircle",
         "slug": "Spellcircle",
-		"about": "You are here!",
+        "about": "You are here!",
         "url": "https://spellcircle.neocities.org",
-		"owner": "@gil@hol.ogra.ph"
+        "owner": "@gil@hol.ogra.ph"
     },
     {
         "name": "Gil•INK",
         "slug": "Gil",
-		"about": "Gil•INK is the domain of Gil the Green. Gil is the leader of the Spellcircle (webring admin), a friend of fairies, and a babaylan",
+        "about": "Gil•INK is the domain of Gil the Green. Gil is the leader of the Spellcircle (webring admin), a friend of fairies, and a babaylan",
         "url": "https://gil.ink/",
         "rss": "https://gil.ink/feed.xml",
-		"owner": "@gil@hol.ogra.ph"
+        "owner": "@gil@hol.ogra.ph"
+    },
+    {
+        "name": "Rust Red River",
+        "slug": "River",
+        "about": "Rust Red River is a website on the bank of a rainforest canal. It is the home of Dylan's writing, music, and space wizardry.",
+        "url": "https://rustredriver.com/",
+        "rss": "https://rustredriver.com/feed.xml",
+        "owner": "@kalviter@hol.ogra.ph"
     }
 ]
