@@ -8,7 +8,11 @@
   </head>
   <body>
     <header>
-      <h1 id="top">🔮 The {{ ring_name }} 🧙</h1>
+      <h1 id="top"><nav>
+        <a href="https://spellcircle.neocities.org/Spellcircle/previous">&larr;</a>
+        🔮 The {{ ring_name }} 🧙
+        <a href="https://spellcircle.neocities.org/Spellcircle/next">&rarr;</a>
+      </nav></h1>
       <p>{{ ring_description }}</p>
     </header>
     <main>
@@ -143,13 +147,13 @@
       </section>
     </main>
     <footer>
-      <p>
+      <nav>
         <a href="https://spellcircle.neocities.org/Spellcircle/previous"
           >&larr;</a
         >
         🔮 <a href="https://spellcircle.neocities.org">Spellcircle</a> 🧙
         <a href="https://spellcircle.neocities.org/Spellcircle/next">&rarr;</a>
-      </p>
+      </nav>
       <p>Last updated: {{ current_time }}</p>
       <p><a href="#top">Back to top</a></p>
     </footer>
