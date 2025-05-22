@@ -21,5 +21,13 @@
         "url": "https://rustredriver.com/",
         "rss": "https://rustredriver.com/feed.xml",
         "owner": "@kalviter@hol.ogra.ph"
+    },
+    {
+        "name": "Kersed",
+        "slug": "kern",
+        "about": "Subterranean lair of the rogue magus known as Kern the Kersed - spell scribe, hidden hermit, keeper of crystals, a pebble in the river of knowing.",
+        "url": "https://kersed.net/",
+        "rss": "https://kersed.net/index.xml",
+        "owner": "@kern@hol.ogra.ph"
     }
 ]
