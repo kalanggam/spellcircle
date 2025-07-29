@@ -29,5 +29,19 @@
         "url": "https://kersed.net/",
         "rss": "https://kersed.net/index.xml",
         "owner": "@kern@hol.ogra.ph"
+    },
+    {
+        "name": "Kamingawan",
+        "slug": "Kamingawan",
+        "about": "Kamingawan is the fledgling digital forest of Kal, a space-ace warlock. It welcomes all friends to its hearth, but especially the dragon-shaped, the inkblots, and the silly little guys.",
+        "url": "https://kamingawan.nekoweb.org/",
+        "owner": "@kalayo@hol.ogra.ph"
+    },
+    {
+        "name": "GA Coven Archive Project",
+        "slug": "meander97",
+        "about": "The GA Coven Archive Project is a website archiving religious/spiritual groups located in the state of Georgia, USA and their public-facing online history. I have gathered the advertisements and website bios of various Wiccan covens, ceremonial magicians, spiritual circles, and other magical gatherings for GA between 1996-2025.",
+        "url": "https://meander97.neocities.org/",
+        "owner": "Munušninanna"
     }
 ]
