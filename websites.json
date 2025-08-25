@@ -43,5 +43,20 @@
         "about": "The GA Coven Archive Project is a website archiving religious/spiritual groups located in the state of Georgia, USA and their public-facing online history. I have gathered the advertisements and website bios of various Wiccan covens, ceremonial magicians, spiritual circles, and other magical gatherings for GA between 1996-2025.",
         "url": "https://meander97.neocities.org/",
         "owner": "Munušninanna"
+    },
+    {
+        "name": "Blu's Cozy Corner",
+        "slug": "blu",
+        "about": "Blu's Cozy Corner is a personal digital space for Rowan/Blu and is also a more dedicated space for their art and blogs.",
+        "url": "https://blu-berricake.pages.gay",
+        "rss": "https://blu-berricake.pages.gay/index.xml",
+        "owner": "@blu_berris@hol.ogra.ph"
+    },
+    {
+        "name": "Ursven",
+        "slug": "M8n.ink",
+        "about": "Just a slightly informative website about Witchcraft.",
+        "url": "https://ursven.neocities.org/Altar",
+        "owner": "Sven"
     }
 ]
